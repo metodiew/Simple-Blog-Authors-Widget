@@ -38,9 +38,8 @@ The class name was changed, so you should add the widget again from Appearance =
 == Screenshots ==
 
 1. Dashboard Widgets
-2. Front End
-
-For more check out http://metodiew.com/projects/simple-blog-authors-widget/
+2. Front End Widget List
+3. Front End Widget Dropdown
 
 == Changelog ==
 
