@@ -18,7 +18,7 @@ class Metodiew_Simple_Authors_Widget extends WP_Widget {
      * constructor 
     */
     function metodiew_simple_authors_widget() {
-        parent::WP_Widget( false, $name = 'Simple Authors Widget' );	
+        parent::__construct( false, $name = 'Simple Authors Widget' );	
     }
 
     /** 
