@@ -31,11 +31,25 @@ Check out http://metodiew.com/projects/simple-blog-authors-widget/
 
 == Changelog ==
 
-* Fixed a bug that made it so you could not disable gravatars
-* Only authors with at least one post are listed now
-* Only pulls in users with a level greater than 0
+= (09.08.2015) =
+* Version was changed to 1.5.0
+* Move all functions to Class and update the OOP structure. 
+* Fix "Deprecating PHP4 style constructors in WordPress 4.3".
+	- See: https://make.wordpress.org/core/2015/07/02/deprecating-php4-style-constructors-in-wordpress-4-3/
+* remove console.log from the main.js file
+* Add SBAW_VERSION define variable
+* Add SBAW_TEXT_DOMAIN define variable
+	
 
-(06/05/2014)
+= (26.10.2014) =
+* Version was changed to 1.4.0
+* Added option to display authors in dropdown menu
+
+= (05.06.2014) =
 * Version was changed to 1.0.3
 * The plugin authorship was changed from Pippin Williamson to Stanko Metodiev.
 * Fixed some notices for undefined variables.
+
+* Fixed a bug that made it so you could not disable gravatars
+* Only authors with at least one post are listed now
+* Only pulls in users with a level greater than 0
