@@ -34,7 +34,7 @@ The class name was changed, so you should add the widget again from Appearance =
 == Changelog ==
 
 = (09.08.2015) =
-* Version was changed to 1.5.0
+* Version updated to 1.5.0
 * Move all functions to Class and update the OOP structure. 
 * Fix "Deprecating PHP4 style constructors in WordPress 4.3".
 	- See: https://make.wordpress.org/core/2015/07/02/deprecating-php4-style-constructors-in-wordpress-4-3/

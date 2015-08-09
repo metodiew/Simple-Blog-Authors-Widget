@@ -3,14 +3,14 @@
 Plugin Name: Simple Blog Authors Widget
 Plugin URI: http://metodiew.com/projects/simple-blog-authors-widget/
 Description: Provides a widget to list blog authors, including gravatars, post counts, and bios
-Version: 1.4.0
+Version: 1.5.0
 Author: Stanko Metodiev
 Contributors: metodiew
 Author URI: http://metodiew.com
 */
 
 if ( ! defined( 'SBAW_VERSION' ) ) {
-	define( 'SBAW_VERSION', '1.4.0' );
+	define( 'SBAW_VERSION', '1.5.0' );
 }
 
 if ( ! defined( 'SBAW_TEXT_DOMAIN' ) ) {
