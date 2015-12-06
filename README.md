@@ -33,6 +33,9 @@ The class name was changed, so you should add the widget again from Appearance =
 
 == Changelog ==
 
+= (06.12.2015) =
+* Update Tested up to: 4.4
+
 = (09.08.2015) =
 * Version updated to 1.5.0
 * Move all functions to Class and update the OOP structure. 
