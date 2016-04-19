@@ -6,7 +6,7 @@ Plugin URI: http://metodiew.com/projects/simple-blog-authors-widget/
 Donate link: http://metodiew.com
 Tags: widget, widgets, authors, blog authors, simple
 Requires at least: 2.8
-Tested up to: 4.4
+Tested up to: 4.5
 Stable tag: 1.5.0
 
 This plugin lets provides a simple widget to list your blog's authors, including gravatar and post counts
