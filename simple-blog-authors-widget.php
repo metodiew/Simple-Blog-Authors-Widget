@@ -31,8 +31,8 @@ class Metodiew_Simple_Authors_Widget extends WP_Widget {
     	
 		parent::__construct(
 			'metodiew_simple_authors_widget',
-			__( 'Simple Authors Widget', $this->text_domain ),
-			array( 'description' => __( 'Simple Authors Widget', $this->text_domain ), )
+			__( 'Simple Authors Widget', 'sbaw' ),
+			array( 'description' => __( 'Simple Authors Widget', 'sbaw' ), )
 		);
 		
 		// Register SBAW Widget
@@ -89,7 +89,7 @@ class Metodiew_Simple_Authors_Widget extends WP_Widget {
 		
 		if ( ! empty( $dropdown ) && $dropdown == 1 ) {
 			echo '<select id="sbaw-select">';
-			echo '<option value="0">'. __( 'Select Author', $this->text_domain ) .'</option>';
+			echo '<option value="0">'. __( 'Select Author', 'sbaw' ) .'</option>';
 			
 			foreach ( $authors as $author ) {
 				$posts_count = count_user_posts( $author->ID );
@@ -150,22 +150,22 @@ class Metodiew_Simple_Authors_Widget extends WP_Widget {
 		$dropdown = isset( $instance['dropdown'] ) ? esc_attr( $instance['dropdown'] ) : '';
         ?>
 		<p>
-        	<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', $this->text_domain ); ?></label> 
+        	<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'sbaw' ); ?></label> 
           	<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" />
         </p>
 
 		<p>
          	<input id="<?php echo $this->get_field_id( 'count' ); ?>" name="<?php echo $this->get_field_name( 'count' ); ?>" type="checkbox" value="1" <?php checked( '1', $count ); ?>/>
-          	<label for="<?php echo $this->get_field_id( 'count' ); ?>"><?php _e( 'Display Post Count?', $this->text_domain ); ?></label> 
+          	<label for="<?php echo $this->get_field_id( 'count' ); ?>"><?php _e( 'Display Post Count?', 'sbaw' ); ?></label> 
         </p>
 
 		<p>
           	<input id="<?php echo $this->get_field_id( 'gravatar' ); ?>" name="<?php echo $this->get_field_name( 'gravatar' ); ?>" type="checkbox" value="1" <?php checked( '1', $gravatar ); ?>/>
-          	<label for="<?php echo $this->get_field_id( 'gravatar' ); ?>"><?php _e( 'Display Author Gravatar?', $this->text_domain ); ?></label> 
+          	<label for="<?php echo $this->get_field_id( 'gravatar' ); ?>"><?php _e( 'Display Author Gravatar?', 'sbaw' ); ?></label> 
         </p>
         <p>
         	<input id="<?php echo $this->get_field_id( 'dropdown' ); ?>" name="<?php echo $this->get_field_name( 'dropdown' ); ?>" type="checkbox" value="1" <?php checked( '1', $dropdown ); ?>/>
-        	<label for="<?php echo $this->get_field_id( 'dropdown' ); ?>"><?php _e( 'Display authors list in a dropdown?', $this->text_domain ); ?></label>
+        	<label for="<?php echo $this->get_field_id( 'dropdown' ); ?>"><?php _e( 'Display authors list in a dropdown?', 'sbaw' ); ?></label>
         </p>
         <?php 
     }
