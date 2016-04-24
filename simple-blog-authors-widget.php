@@ -40,6 +40,9 @@ class Metodiew_Simple_Authors_Widget extends WP_Widget {
 		
 		// Enqueue Styles and Scripts
 		add_action( 'wp_enqueue_scripts', array( $this, 'sbaw_enqueue_scripts' ) );
+		
+		// i18n functiom here
+		add_action( 'plugins_loaded', array( $this, 'load_textdomain' ) );
     }
 	
 	// register Foo_Widget widget
@@ -50,6 +53,15 @@ class Metodiew_Simple_Authors_Widget extends WP_Widget {
 	function sbaw_enqueue_scripts() {
 		wp_enqueue_script( 'sbaw-main', plugins_url( '/js/main.js' , __FILE__ ), array( 'jquery' ), '1.0', true );
 		wp_localize_script( 'sbaw-main', 'sbawAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );  
+	}
+	
+	/**
+	 * Load plugin textdomain.
+	 *
+	 * @since 1.0.0
+	 */
+	function load_textdomain() {
+		load_plugin_textdomain( 'sbaw', false, plugin_basename( dirname( __FILE__ ) ) . '/languages' );
 	}
 
     /** 
@@ -77,7 +89,7 @@ class Metodiew_Simple_Authors_Widget extends WP_Widget {
 		
 		if ( ! empty( $dropdown ) && $dropdown == 1 ) {
 			echo '<select id="sbaw-select">';
-			printf( __( '<option value="0">Select Author</option>', $this->text_domain ) );
+			echo '<option value="0">'. __( 'Select Author', $this->text_domain ) .'</option>';
 			
 			foreach ( $authors as $author ) {
 				$posts_count = count_user_posts( $author->ID );
