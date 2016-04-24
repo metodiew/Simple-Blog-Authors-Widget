@@ -1,0 +1,43 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: /var/www/html/wpplayground/wp-content/plugins/Simple-"
+"Blog-Authors-Widget\n"
+"POT-Creation-Date: 2016-04-24 15:26+0200\n"
+"PO-Revision-Date: 2016-04-24 15:27+0200\n"
+"Last-Translator: \n"
+"Language-Team: metodiew <stanko@metodiew.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.5\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: /var/www/html/wpplayground/wp-content/plugins/Simple-"
+"Blog-Authors-Widget\n"
+
+#: /var/www/html/wpplayground/wp-content/plugins/Simple-Blog-Authors-Widget/simple-blog-authors-widget.php:34
+#: /var/www/html/wpplayground/wp-content/plugins/Simple-Blog-Authors-Widget/simple-blog-authors-widget.php:35
+msgid "Simple Authors Widget"
+msgstr ""
+
+#: /var/www/html/wpplayground/wp-content/plugins/Simple-Blog-Authors-Widget/simple-blog-authors-widget.php:92
+msgid "Select Author"
+msgstr ""
+
+#: /var/www/html/wpplayground/wp-content/plugins/Simple-Blog-Authors-Widget/simple-blog-authors-widget.php:153
+msgid "Title:"
+msgstr ""
+
+#: /var/www/html/wpplayground/wp-content/plugins/Simple-Blog-Authors-Widget/simple-blog-authors-widget.php:159
+msgid "Display Post Count?"
+msgstr ""
+
+#: /var/www/html/wpplayground/wp-content/plugins/Simple-Blog-Authors-Widget/simple-blog-authors-widget.php:164
+msgid "Display Author Gravatar?"
+msgstr ""
+
+#: /var/www/html/wpplayground/wp-content/plugins/Simple-Blog-Authors-Widget/simple-blog-authors-widget.php:168
+msgid "Display authors list in a dropdown?"
+msgstr ""
