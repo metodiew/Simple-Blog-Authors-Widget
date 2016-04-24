@@ -3,33 +3,36 @@
 Plugin Name: Simple Blog Authors Widget
 Plugin URI: http://metodiew.com/projects/simple-blog-authors-widget/
 Description: Provides a widget to list blog authors, including gravatars, post counts, and bios
-Version: 1.5.0
+Version: 1.5.1
 Author: Stanko Metodiev
 Contributors: metodiew
 Author URI: http://metodiew.com
+Text Domain: sbaw
+Domain Path: /languages
 */
 
 if ( ! defined( 'SBAW_VERSION' ) ) {
-	define( 'SBAW_VERSION', '1.5.0' );
-}
-
-if ( ! defined( 'SBAW_TEXT_DOMAIN' ) ) {
-	define( 'SBAW_TEXT_DOMAIN', 'sbaw' );
+	define( 'SBAW_VERSION', '1.5.1' );
 }
 
 /**
  * Simple Blog Authors Widget Class
  */
 class Metodiew_Simple_Authors_Widget extends WP_Widget {
+	
+	private $text_domain;
 
     /** 
      * constructor 
     */
     function __construct() {
+    	
+    	$this->text_domain = 'sbaw';
+    	
 		parent::__construct(
 			'metodiew_simple_authors_widget',
-			__( 'Simple Authors Widget', SBAW_TEXT_DOMAIN ),
-			array( 'description' => __( 'Simple Authors Widget', SBAW_TEXT_DOMAIN ), )
+			__( 'Simple Authors Widget', $this->text_domain ),
+			array( 'description' => __( 'Simple Authors Widget', $this->text_domain ), )
 		);
 		
 		// Register SBAW Widget
@@ -74,7 +77,7 @@ class Metodiew_Simple_Authors_Widget extends WP_Widget {
 		
 		if ( ! empty( $dropdown ) && $dropdown == 1 ) {
 			echo '<select id="sbaw-select">';
-			printf( __( '<option value="0">Select Author</option>', SBAW_TEXT_DOMAIN ) );
+			printf( __( '<option value="0">Select Author</option>', $this->text_domain ) );
 			
 			foreach ( $authors as $author ) {
 				$posts_count = count_user_posts( $author->ID );
@@ -135,22 +138,22 @@ class Metodiew_Simple_Authors_Widget extends WP_Widget {
 		$dropdown = isset( $instance['dropdown'] ) ? esc_attr( $instance['dropdown'] ) : '';
         ?>
 		<p>
-        	<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', SBAW_TEXT_DOMAIN ); ?></label> 
+        	<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', $this->text_domain ); ?></label> 
           	<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" />
         </p>
 
 		<p>
          	<input id="<?php echo $this->get_field_id( 'count' ); ?>" name="<?php echo $this->get_field_name( 'count' ); ?>" type="checkbox" value="1" <?php checked( '1', $count ); ?>/>
-          	<label for="<?php echo $this->get_field_id( 'count' ); ?>"><?php _e( 'Display Post Count?', SBAW_TEXT_DOMAIN ); ?></label> 
+          	<label for="<?php echo $this->get_field_id( 'count' ); ?>"><?php _e( 'Display Post Count?', $this->text_domain ); ?></label> 
         </p>
 
 		<p>
           	<input id="<?php echo $this->get_field_id( 'gravatar' ); ?>" name="<?php echo $this->get_field_name( 'gravatar' ); ?>" type="checkbox" value="1" <?php checked( '1', $gravatar ); ?>/>
-          	<label for="<?php echo $this->get_field_id( 'gravatar' ); ?>"><?php _e( 'Display Author Gravatar?', SBAW_TEXT_DOMAIN ); ?></label> 
+          	<label for="<?php echo $this->get_field_id( 'gravatar' ); ?>"><?php _e( 'Display Author Gravatar?', $this->text_domain ); ?></label> 
         </p>
         <p>
         	<input id="<?php echo $this->get_field_id( 'dropdown' ); ?>" name="<?php echo $this->get_field_name( 'dropdown' ); ?>" type="checkbox" value="1" <?php checked( '1', $dropdown ); ?>/>
-        	<label for="<?php echo $this->get_field_id( 'dropdown' ); ?>"><?php _e( 'Display authors list in a dropdown?', SBAW_TEXT_DOMAIN ); ?></label>
+        	<label for="<?php echo $this->get_field_id( 'dropdown' ); ?>"><?php _e( 'Display authors list in a dropdown?', $this->text_domain ); ?></label>
         </p>
         <?php 
     }

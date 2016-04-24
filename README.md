@@ -33,6 +33,10 @@ The class name was changed, so you should add the widget again from Appearance =
 
 == Changelog ==
 
+= (24.04.2016) =
+* Update Tested up to: 4.5
+* Improve i18n strings
+
 = (06.12.2015) =
 * Update Tested up to: 4.4
 
